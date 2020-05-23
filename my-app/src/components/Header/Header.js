@@ -4,7 +4,7 @@ import Navigation from "../Navigation/Navigation";
 
 function Header() {
     return (
-        <div className="App">
+        <div>
             <Navigation/>
         </div>
     )

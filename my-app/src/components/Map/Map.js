@@ -61,6 +61,58 @@ class States extends React.Component {
         super(props);
         this.state = {
             states: {
+                ak: {state: "active", gov_twitter:"...", reps:"...", info:"..."},
+                al: {state: "inactive", INS:""},
+                ar: {state: "inactive", INS:""},
+                az: {state: "inactive", INS:""},
+                ca: {state: "inactive", INS:""},
+                co: {state: "inactive", INS:""},
+                ct: {state: "inactive", INS:""},
+                dc: {state: "inactive", INS:""},
+                de: {state: "inactive", INS:""},
+                fl: {state: "inactive", INS:""},
+                ga: {state: "inactive", INS:""},
+                hi: {state: "inactive", INS:""},
+                ia: {state: "inactive", INS:""},
+                id: {state: "inactive", INS:""},
+                il: {state: "inactive", INS:""},
+                in: {state: "inactive", INS:""},
+                ks: {state: "inactive", INS:""},
+                ky: {state: "inactive", INS:""},
+                la: {state: "inactive", INS:""},
+                ma: {state: "inactive", INS:""},
+                md: {state: "inactive", INS:""},
+                me: {state: "inactive", INS:""},
+                mi: {state: "inactive", INS:""},
+                mn: {state: "inactive", INS:""},
+                mo: {state: "inactive", INS:""},
+                ms: {state: "active", INS:""},
+                mt: {state: "inactive", INS:""},
+                nc: {state: "inactive", INS:""},
+                nd: {state: "inactive", INS:""},
+                ne: {state: "inactive", INS:""},
+                nh: {state: "inactive", INS:""},
+                nj: {state: "inactive", INS:""},
+                nm: {state: "inactive", INS:""},
+                nv: {state: "inactive", INS:""},
+                ny: {state: "inactive", INS:""},
+                oh: {state: "inactive", INS:""},
+                ok: {state: "inactive", INS:""},
+                or: {state: "inactive", INS:""},
+                pa: {state: "inactive", INS:""},
+                ri: {state: "inactive", INS:""},
+                sc: {state: "inactive", INS:""},
+                sd: {state: "inactive", INS:""},
+                tn: {state: "inactive", INS:""},
+                tx: {state: "inactive", INS:""},
+                ut: {state: "inactive", INS:""},
+                va: {state: "inactive", INS:""},
+                vt: {state: "inactive", INS:""},
+                wa: {state: "inactive", INS:""},
+                wi: {state: "inactive", INS:""},
+                wv: {state: "inactive", INS:""},
+                wy: {state: "active", INS:""},
+
                 ak: {state: "republican", data: ""},
                 al: {state: "democrat", data: ""},
                 ar: {state: "democrat", data: ""},
@@ -150,13 +202,9 @@ class States extends React.Component {
 
     render() {
         return (
-            <svg
-                enable_background="new 0 0 1000 589"
-                height="589px"
+            <svg 
                 pretty_print="False"
-                styles="stroke-linejoin: round; stroke:#000; fill: red;"
                 viewBox="0 0 1000 589"
-                width="1000px"
             >
                 <AK onClick={ ()=> { this.showPopup("ak"); } } className={"state " + this.state.states.ak.state} />
                 <AL onClick={ ()=> { this.showPopup("al"); } } className={"state " + this.state.states.al.state} />
