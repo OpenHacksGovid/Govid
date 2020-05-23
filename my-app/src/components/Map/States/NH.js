@@ -4,6 +4,7 @@ class NH extends React.Component {
     render() {
         return (
             <path
+            onClick={() => this.props.onClick()}
             className={this.props.className}     
             id="NH"
             data-name="New Hampshire"
