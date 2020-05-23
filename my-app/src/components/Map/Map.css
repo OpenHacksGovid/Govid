@@ -1,12 +1,19 @@
 .state {
-    fill: black;
+    stroke: black;
+    stroke-width: 1px;
 }
 
-.state.active {
+.state.republican {
     fill: red;
 
 }
 
-.state.inactive {
-    fill: #aaaaaa;
+.state.democrat {
+    fill: blue;
+}
+
+.state:hover {
+    fill: #111111;
+    z-index: 10;
+    cursor: grab;
 }
