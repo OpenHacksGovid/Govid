@@ -1,10 +1,11 @@
 import React from 'react'
-import Nav from '../Navigation/Navigation';
+//import Nav from '../Navigation/Navigation';
+import Navigation from "../Navigation/Navigation";
 
 function Header() {
     return (
         <div className="App">
-            <Nav/>
+            <Navigation/>
         </div>
     )
 }

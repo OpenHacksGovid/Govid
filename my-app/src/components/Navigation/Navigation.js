@@ -8,7 +8,7 @@ class Nav extends React.Component {
     render() {
         return (
             <Router>
-            <div className="container">
+            <div>
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
