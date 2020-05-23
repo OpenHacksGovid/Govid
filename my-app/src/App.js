@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import Map from './components/Body/App'
-import Header from "./components/Header/App";
+import Map from './components/Body/Body'
+import Header from "./components/Header/Header";
 
 function App() {
   return (
