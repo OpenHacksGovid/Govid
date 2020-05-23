@@ -1,14 +1,12 @@
 import React from 'react';
-import logo from './us.svg';
+import Map from '../Map/Map';
 
-function Map() {
+function Body() {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </header>
+            <Map />
         </div>
     );
 }
 
-export default Map;
+export default Body;
