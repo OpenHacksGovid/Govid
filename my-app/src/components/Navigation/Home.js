@@ -1,3 +1,17 @@
 import React from 'react';
-const Home = () => <h1>This is the Home Page</h1>;
+
+//import Body from './components/Body/Body';
+//import Navigation from "./components/Navigation/Navigation";
+import Map from "../Map/Map";
+
+function Home() {
+    return (
+        <div className="Home">
+            <div>
+                <p>this is the home page</p>
+                <Map />
+            </div>
+        </div>
+    );
+}
 export default Home;
