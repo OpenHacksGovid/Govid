@@ -7,6 +7,8 @@ function App() {
   return (
     <div className="App">
      <div>
+        <Header/>
+        <Map/>
         <Navigation />
         <Header />
         <Body />
