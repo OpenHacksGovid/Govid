@@ -62,7 +62,6 @@ class States extends React.Component {
             states: {
                 ak: {state: "active", gov_twitter:"...", reps:"...", info:"..."},
                 al: {state: "inactive", INS:""},
-                al: {state: "inactive", INS:""},
                 ar: {state: "inactive", INS:""},
                 az: {state: "inactive", INS:""},
                 ca: {state: "inactive", INS:""},
@@ -118,13 +117,9 @@ class States extends React.Component {
 
     render() {
         return (
-            <svg
-                enable_background="new 0 0 1000 589"
-                height="589px"
+            <svg 
                 pretty_print="False"
-                styles="stroke-linejoin: round; stroke:#000; fill: red;"
                 viewBox="0 0 1000 589"
-                width="1000px"
             >
                 <AK className={"state " + this.state.states.ak.state} />
                 <AL className={"state " + this.state.states.al.state} />
