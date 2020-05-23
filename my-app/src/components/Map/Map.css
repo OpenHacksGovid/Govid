@@ -1,0 +1,12 @@
+.state {
+    fill: black;
+}
+
+.state.active {
+    fill: red;
+
+}
+
+.state.inactive {
+    fill: #aaaaaa;
+}
