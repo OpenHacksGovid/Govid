@@ -22,9 +22,9 @@ class News extends React.Component {
         return (
             <div className="mb-5">
                 {this.state.articles
-                    .filter(name => {
-                        return name.title.toLowerCase().indexOf("corona") > 0 || name.title.toLowerCase().indexOf("covid") > 0;
-                    })
+                    //.filter(name => {
+                    //    return name.title.toLowerCase().indexOf("corona") > 0 || name.title.toLowerCase().indexOf("covid") > 0;
+                    //})
                     .map(article => (
                     <div key={article.id} className="news-article">
                         <span className="row m-0 py-1">
