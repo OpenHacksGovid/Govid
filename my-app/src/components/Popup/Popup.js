@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Popup() {
-    const [setIsShown] = useState(false);
-
     return (
-        <div className="App">
-            <button
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}>
-                Hover over me!
-            </button>
+        <div className="App" style={{background: "white"}}>
+            <h1>Popup text</h1>
         </div>
     );
 }
-
 export default Popup;
