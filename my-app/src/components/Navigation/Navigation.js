@@ -17,7 +17,7 @@ class Nav extends React.Component {
                 <h5 className="mb-0 text-center">All your information needs for COVID-19 and your government</h5>
                 <nav className="mb-3 navbar nav-tabs navbar-expand-lg navbar-light">
                     <ul className="navbar-nav mx-auto">
-                        <li ref="home-link"><Link className="nav-link active"to="/">Home</Link></li>
+                        <li ref="home-link"><Link className="nav-link"to="/">Home</Link></li>
                         <li ref="news-link"><Link className="nav-link" to="/news">News</Link></li>
                         <li ref="about-link"><Link className="nav-link" to="/about">About</Link></li>
                     </ul>
