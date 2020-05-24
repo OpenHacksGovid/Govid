@@ -29,3 +29,8 @@
     min-width: 100px;
     min-height: 200px;
 }
+
+.map {
+    background: #e5e5e5;
+    width: 100%;
+}
