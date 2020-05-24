@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import Home from "./Home";
 import About from "./About";
+import News from "./News";
 
 class Nav extends React.Component {
     render() {
@@ -13,11 +14,13 @@ class Nav extends React.Component {
                     <h1 className="mr-auto"><Link to="/">goVid</Link></h1>
                     <ul className="navbar-nav ml">
                         <li className="navbar-item"><Link to="/">Home</Link></li>
+                        <li className="navbar-item"><Link to="/news">News</Link></li>
                         <li className="navbar-item"><Link to="/about">About</Link></li>
                     </ul>
                 </nav>
 
             <Route path="/" exact component={Home} />
+            <Route path="/news" exact component={News} />
             <Route path="/about" component={About} />
             </div>
             </Router>
