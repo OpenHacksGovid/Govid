@@ -15,13 +15,13 @@ class News extends React.Component {
         this.getNews(); 
     }
 
-    getNews = () => {
+    getNews() {
             const url = "https://covid19-us-api.herokuapp.com/news"
             fetch(url)
                 .then(res => res.json())
-                .then(res => this.setState({ title: res.message.data,
-                    url: res.message.data,
-                    published: res.message.data}))
+                .then(res => this.setState({ title: res.message[0].data,
+                    url: res.message[0].data,
+                    published: res.message[0].data}))
                 .catch(err => console.log(err));
     }
     
