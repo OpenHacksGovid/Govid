@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 function Popup() {
+    const [setIsShown] = useState(false);
+
     return (
-        <div style={{marginLeft: "100px"}} >
+        <div className="App">
+            <button
+                onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}>
+                Hover over me!
+            </button>
         </div>
-    )
+    );
 }
 
 export default Popup;
