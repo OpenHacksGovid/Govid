@@ -1,10 +1,11 @@
 import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function About() {
     return (
-        <div>
+        <div className="text-center">
             <h1>Our Mission</h1>
-            <p>goVid's mission is to provide government data for your needs during the COVID-19 pandemic</p>
+            <p className="lead">goVid's mission is to provide government data for your needs during the COVID-19 pandemic</p>
 
             <h2>About</h2>
             <p>goVid was created because we kept seeing articles about what cities and counties were doing to implement proper steps toward opening up and implementing safety
