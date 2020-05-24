@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 function Popup() {
     return (
-        <div style={{marginLeft: "100px"}} >
+        <div className="App" style={{background: "white"}}>
+            <h1>Popup text</h1>
         </div>
-    )
+    );
 }
-
 export default Popup;
