@@ -8,9 +8,11 @@ function About() {
             <p className="lead">goVid's mission is to provide government data for your needs during the COVID-19 pandemic</p>
 
             <h2>About</h2>
-            <p className="lead">We created goVid because we kept seeing articles about what cities and counties were doing to implemet proper steps toward opening up and implementing safety
-                regulations for everyone living in the area. We wanted to make things simple for the next person that was searching! Here on goVid you can see who
-                your representatives are in both the House of Representatives, the Senate, as well as your governor and their contact information.
+            <p>goVid was created because we kept seeing articles about what cities and counties were doing to implement proper steps toward opening up and implementing safety
+                regulations for everyone living in the area. We wanted to make things simple for the next person that was searching! check on goVid to see who
+                your representatives are in both the House of Representatives, the Senate, as well as your governor's Twitter handle and their contact information. If you are having
+                trouble with unemployment please hover on your state and click the link to state unemployment website where you can find the appropriate information to be taken care of
+                during this pandemic.
             </p>
         </div>
     )
