@@ -9,26 +9,32 @@ class News extends React.Component {
     }
 
     async componentDidMount() {
-        const url = "https://covid19-us-api.herokuapp.com/news";
-        const response = await fetch(url);
-        const data = await response.json();
-        this.setState({articles: data.message})
-        console.log(data.message)
+        if (this.state.articles.length === 0) {
+            const url = "https://covid19-us-api.herokuapp.com/news";
+            const response = await fetch(url);
+            const data = await response.json();
+            this.setState({articles: data.message});
+        }
     }
 
     render() {
         this.componentDidMount();
         return (
-        <div>
-            {this.state.articles.map(article => (
-                <div key={article.id}>
-                    <p>{article.title}</p>
-                    <a href={article.url} target="_blank" 
-                    rel="noopener noreferrer">{article.url}</a>
-                    <p>{article.published}</p> 
-                </div>
-            ))} 
-         </div>
+            <div className="mb-5">
+                {this.state.articles
+                    .filter(name => {
+                        return name.title.toLowerCase().indexOf("corona") > 0 || name.title.toLowerCase().indexOf("covid") > 0;
+                    })
+                    .map(article => (
+                    <div key={article.id} className="news-article">
+                        <span className="row m-0 py-1">
+                            <a className="col-9 h6" href={article.url} target="_blank" rel="noopener noreferrer">{article.title}</a>
+                            <p className="col text-muted text-right">{article.published.trim()}</p>
+                        </span>
+                        <hr></hr>
+                    </div>
+                ))} 
+            </div>
         );
     }
 }
