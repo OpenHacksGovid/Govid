@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import '../../App.css';
 
 import Home from "./Home";
 import About from "./About";
@@ -16,9 +17,9 @@ class Nav extends React.Component {
                 <h5 className="text-center">All your information needs for COVID-19 and your government</h5>
                 <nav className="mb-3 navbar navbar-expand-lg navbar-light bg-light">
                     <ul className="navbar-nav mx-auto">
-                        <li className="navbar-item"><Link to="/">Home</Link></li>
-                        <li className="navbar-item"><Link to="/news">News</Link></li>
-                        <li className="navbar-item"><Link to="/about">About</Link></li>
+                        <li className="navbar-item current"><Link to="/">Home</Link></li>
+                        <li className="navbar-item current"><Link to="/news" >News</Link></li>
+                        <li className="navbar-item current"><Link to="/about" >About</Link></li>
                     </ul>
                 </nav>
 

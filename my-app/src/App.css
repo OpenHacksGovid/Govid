@@ -11,6 +11,10 @@
     text-decoration: none;
 }
 
+.nav .current {
+    background-color: red;
+}
+
 h1 a:link {
     text-decoration: none;
 }
