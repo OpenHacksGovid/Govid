@@ -63,58 +63,59 @@ class States extends React.Component {
             popup_data: null,
             popup_x: -1,
             popup_y: -1,
+            curr_data: null,
             states: {
-                ak: {state: "", data: ""},
-                al: {state: "", data: ""},
-                ar: {state: "", data: ""},
-                az: {state: "", data: ""},
-                ca: {state: "", data: ""},
-                co: {state: "", data: ""},
-                ct: {state: "", data: ""},
-                dc: {state: "", data: ""},
-                de: {state: "", data: ""},
-                fl: {state: "", data: ""},
-                ga: {state: "", data: ""},
-                hi: {state: "", data: ""},
-                ia: {state: "", data: ""},
-                id: {state: "", data: ""},
-                il: {state: "", data: ""},
-                in: {state: "", data: ""},
-                ks: {state: "", data: ""},
-                ky: {state: "", data: ""},
-                la: {state: "", data: ""},
-                ma: {state: "", data: ""},
-                md: {state: "", data: ""},
-                me: {state: "", data: ""},
-                mi: {state: "", data: ""},
-                mn: {state: "", data: ""},
-                mo: {state: "", data: ""},
-                ms: {state: "", data: ""},
-                mt: {state: "", data: ""},
-                nc: {state: "", data: ""},
-                nd: {state: "", data: ""},
-                ne: {state: "", data: ""},
-                nh: {state: "", data: ""},
-                nj: {state: "", data: ""},
-                nm: {state: "", data: ""},
-                nv: {state: "", data: ""},
-                ny: {state: "", data: ""},
-                oh: {state: "", data: ""},
-                ok: {state: "", data: ""},
-                or: {state: "", data: ""},
-                pa: {state: "", data: ""},
-                ri: {state: "", data: ""},
-                sc: {state: "", data: ""},
-                sd: {state: "", data: ""},
-                tn: {state: "", data: ""},
-                tx: {state: "", data: ""},
-                ut: {state: "", data: ""},
-                va: {state: "", data: ""},
-                vt: {state: "", data: ""},
-                wa: {state: "", data: ""},
-                wi: {state: "", data: ""},
-                wv: {state: "", data: ""},
-                wy: {state: "", data: ""},
+                ak: {state: "", data: null, cases: 0},
+                al: {state: "", data: null, cases: 0},
+                ar: {state: "", data: null, cases: 0},
+                az: {state: "", data: null, cases: 0},
+                ca: {state: "", data: null, cases: 0},
+                co: {state: "", data: null, cases: 0},
+                ct: {state: "", data: null, cases: 0},
+                dc: {state: "", data: null, cases: 0},
+                de: {state: "", data: null, cases: 0},
+                fl: {state: "", data: null, cases: 0},
+                ga: {state: "", data: null, cases: 0},
+                hi: {state: "", data: null, cases: 0},
+                ia: {state: "", data: null, cases: 0},
+                id: {state: "", data: null, cases: 0},
+                il: {state: "", data: null, cases: 0},
+                in: {state: "", data: null, cases: 0},
+                ks: {state: "", data: null, cases: 0},
+                ky: {state: "", data: null, cases: 0},
+                la: {state: "", data: null, cases: 0},
+                ma: {state: "", data: null, cases: 0},
+                md: {state: "", data: null, cases: 0},
+                me: {state: "", data: null, cases: 0},
+                mi: {state: "", data: null, cases: 0},
+                mn: {state: "", data: null, cases: 0},
+                mo: {state: "", data: null, cases: 0},
+                ms: {state: "", data: null, cases: 0},
+                mt: {state: "", data: null, cases: 0},
+                nc: {state: "", data: null, cases: 0},
+                nd: {state: "", data: null, cases: 0},
+                ne: {state: "", data: null, cases: 0},
+                nh: {state: "", data: null, cases: 0},
+                nj: {state: "", data: null, cases: 0},
+                nm: {state: "", data: null, cases: 0},
+                nv: {state: "", data: null, cases: 0},
+                ny: {state: "", data: null, cases: 0},
+                oh: {state: "", data: null, cases: 0},
+                ok: {state: "", data: null, cases: 0},
+                or: {state: "", data: null, cases: 0},
+                pa: {state: "", data: null, cases: 0},
+                ri: {state: "", data: null, cases: 0},
+                sc: {state: "", data: null, cases: 0},
+                sd: {state: "", data: null, cases: 0},
+                tn: {state: "", data: null, cases: 0},
+                tx: {state: "", data: null, cases: 0},
+                ut: {state: "", data: null, cases: 0},
+                va: {state: "", data: null, cases: 0},
+                vt: {state: "", data: null, cases: 0},
+                wa: {state: "", data: null, cases: 0},
+                wi: {state: "", data: null, cases: 0},
+                wv: {state: "", data: null, cases: 0},
+                wy: {state: "", data: null, cases: 0},
             }
         }
 
@@ -127,21 +128,6 @@ class States extends React.Component {
         });
 
         this.getCovidAPI();
-    }
-
-    getAPIData(st) { //Get the API data and store it into the global state (states)
-        const proxy = "https://cors-forwarder.herokuapp.com/";
-        const url_state_1 = "https://whoismyrepresentative.com/getall_reps_bystate.php?state=";
-        const url_state_2 = "&output=json";
-
-        fetch(proxy + url_state_1 + st + url_state_2)
-            .then(response => response.json())
-            .then(contents => {
-                let v = this.state.states;
-                v[st].data = contents.results;
-                console.log("Data for state " + st + ": " + v[st].data);
-                this.setState({states: v});
-            });
     }
 
     getCovidAPI() { //Get the COVID data
@@ -159,8 +145,8 @@ class States extends React.Component {
                     }
                    const states = this.state.states;
                    if (states[contents[k].state.toLowerCase()] !== undefined) {
-                        console.log(contents[k]);
                        states[contents[k].state.toLowerCase()].state = stat;
+                       states[contents[k].state.toLowerCase()].cases = v; 
                        this.setState({ states: states });
                    }
                 }
@@ -170,26 +156,67 @@ class States extends React.Component {
     showPopup(e, st) { //Display the popup near the mouse
         e = e || window.event;
         //TODO: add popup info
-        //Set state popup_data with HTML
-        //Get reps & sens. -> list into table - name, link, phone
+        //Get sens.
         //State no. of cases at top
-        //And state name
+        //WA, KS, NY: governor Twitter, unemployment bureau, voting information (online)
+ 
+       if (this.state.states[st].data === null) {
+           const proxy = "https://cors-forwarder.herokuapp.com/";
+            const url_state_1 = "https://whoismyrepresentative.com/getall_reps_bystate.php?state=";
+            const url_state_2 = "&output=json";
+            fetch(proxy + url_state_1 + st + url_state_2)
+                .then(response => response.json())
+                .then(contents => {
+                    const states = this.state.states;
+                    states[st].data = contents.results;
+                    this.setState({ states: states, curr_data: contents.results, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+                });
+        } else {
+            this.setState({ curr_data: this.state.states[st].data, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+        }
+    }
 
-        /*
-            NAME - CASES
-            Reps Phone
-        */
+    getRepsAsList(data) {
+        return (
+            data.map((item, i) => {
+                return (
+                    <tr key={i}>
+                        <td>
+                            <a href={ item.link }>{ item.name + " (" + item.party.charAt(0) + ")"}</a>
+                        </td>
+                        <td>
+                            { item.phone }
+                        </td>
+                    </tr>
+                );
+            })
+        )
+    }
 
-        //->>>Coloring legend
-
-        this.setState({ popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+    renderResultsTable(data) {
+        return (
+            <table className="reps-table">
+                <thead className="text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { this.getRepsAsList(data) }
+                </tbody>
+            </table>
+        );
     }
 
     renderPopup() {
         if (this.state.popup_active !== null) {
             return (
                     <div ref={(n) => this.node = n} className="popup" style={{left: this.state.popup_x, top: this.state.popup_y}}>
-                        <h1>State: {this.state.data}</h1>
+                        <h5 className="text-center">{ this.state.popup_active.toUpperCase() }</h5>
+                        <h6 className="text-center">Cases: { this.state.states[this.state.popup_active].cases }</h6>
+                        <p className="pt-2 text-center">House of Representatives</p>
+                        { this.renderResultsTable(this.state.curr_data) }
                     </div>
                 );
         } else {
