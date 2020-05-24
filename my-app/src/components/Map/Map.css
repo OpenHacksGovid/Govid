@@ -1,19 +1,31 @@
 .state {
     stroke: black;
-    stroke-width: 1px;
+    stroke-width: 1.1px;
+    fill: #333333;
 }
 
-.state.republican {
-    fill: red;
-
+.state.high {
+    fill: #F23D17;
 }
 
-.state.democrat {
-    fill: blue;
+.state.medium {
+    fill: #DE7819;
+}
+
+.state.low {
+    fill: #E8D815;
 }
 
 .state:hover {
-    fill: #111111;
     z-index: 10;
     cursor: grab;
+    opacity: 60%;
+}
+
+.popup {
+    position: absolute;
+    background: white;
+    padding: 10px;
+    min-width: 100px;
+    min-height: 200px;
 }
