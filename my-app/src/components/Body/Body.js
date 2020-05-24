@@ -3,8 +3,7 @@ import Map from '../Map/Map';
 
 function Body() {
     return (
-        <div className="App">
-        </div>
+       <div></div>
     );
 }
 
