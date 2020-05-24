@@ -63,59 +63,84 @@ class States extends React.Component {
             popup_data: null,
             popup_x: -1,
             popup_y: -1,
-            curr_data: null,
+            curr_senate: null,
+            curr_house: null,
             states: {
-                ak: {state: "", data: null, cases: 0},
-                al: {state: "", data: null, cases: 0},
-                ar: {state: "", data: null, cases: 0},
-                az: {state: "", data: null, cases: 0},
-                ca: {state: "", data: null, cases: 0},
-                co: {state: "", data: null, cases: 0},
-                ct: {state: "", data: null, cases: 0},
-                dc: {state: "", data: null, cases: 0},
-                de: {state: "", data: null, cases: 0},
-                fl: {state: "", data: null, cases: 0},
-                ga: {state: "", data: null, cases: 0},
-                hi: {state: "", data: null, cases: 0},
-                ia: {state: "", data: null, cases: 0},
-                id: {state: "", data: null, cases: 0},
-                il: {state: "", data: null, cases: 0},
-                in: {state: "", data: null, cases: 0},
-                ks: {state: "", data: null, cases: 0},
-                ky: {state: "", data: null, cases: 0},
-                la: {state: "", data: null, cases: 0},
-                ma: {state: "", data: null, cases: 0},
-                md: {state: "", data: null, cases: 0},
-                me: {state: "", data: null, cases: 0},
-                mi: {state: "", data: null, cases: 0},
-                mn: {state: "", data: null, cases: 0},
-                mo: {state: "", data: null, cases: 0},
-                ms: {state: "", data: null, cases: 0},
-                mt: {state: "", data: null, cases: 0},
-                nc: {state: "", data: null, cases: 0},
-                nd: {state: "", data: null, cases: 0},
-                ne: {state: "", data: null, cases: 0},
-                nh: {state: "", data: null, cases: 0},
-                nj: {state: "", data: null, cases: 0},
-                nm: {state: "", data: null, cases: 0},
-                nv: {state: "", data: null, cases: 0},
-                ny: {state: "", data: null, cases: 0},
-                oh: {state: "", data: null, cases: 0},
-                ok: {state: "", data: null, cases: 0},
-                or: {state: "", data: null, cases: 0},
-                pa: {state: "", data: null, cases: 0},
-                ri: {state: "", data: null, cases: 0},
-                sc: {state: "", data: null, cases: 0},
-                sd: {state: "", data: null, cases: 0},
-                tn: {state: "", data: null, cases: 0},
-                tx: {state: "", data: null, cases: 0},
-                ut: {state: "", data: null, cases: 0},
-                va: {state: "", data: null, cases: 0},
-                vt: {state: "", data: null, cases: 0},
-                wa: {state: "", data: null, cases: 0},
-                wi: {state: "", data: null, cases: 0},
-                wv: {state: "", data: null, cases: 0},
-                wy: {state: "", data: null, cases: 0},
+                ak: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                al: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ar: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                az: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ca: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                co: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ct: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                dc: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                de: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                fl: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ga: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                hi: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ia: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                id: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                il: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                in: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ks: {
+                    state: "",
+                    house: null,
+                    senate: null, 
+                    cases: 0,
+                    governor_url: "https://twitter.com/GovLauraKelly",
+                    unemployment_url: "https://www.getkansasbenefits.gov/Home.aspx",
+                    voting_url: "https://www.kdor.ks.gov/apps/voterreg/default.aspx"
+                },
+                ky: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                la: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ma: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                md: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                me: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                mi: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                mn: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                mo: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ms: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                mt: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                nc: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                nd: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ne: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                nh: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                nj: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                nm: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                nv: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ny: {
+                    state: "",
+                    house: null,
+                    senate: null, 
+                    cases: 0,
+                    governor_url: "https://twitter.com/NYGovCuomo",
+                    unemployment_url: "https://www.ny.gov/services/unemployment-0",
+                    voting_url: "https://dmv.ny.gov/more-info/electronic-voter-registration-application"
+                },
+                oh: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ok: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                or: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                pa: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ri: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                sc: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                sd: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                tn: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                tx: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                ut: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                va: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                vt: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                wa: {
+                    state: "",
+                    house: null,
+                    senate: null, 
+                    cases: 0,
+                    governor_url: "https://twitter.com/GovInslee",
+                    unemployment_url: "https://esd.wa.gov/unemployment",
+                    voting_url: "https://www.sos.wa.gov/elections/register.aspx"
+                },
+                wi: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                wv: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
+                wy: {state: "", house: null, senate: null, cases: 0, governor_url: "", unemployment_url: "", voting_url: ""},
             }
         }
 
@@ -155,42 +180,54 @@ class States extends React.Component {
 
     showPopup(e, st) { //Display the popup near the mouse
         e = e || window.event;
-        //TODO: add popup info
-        //Get sens.
-        //State no. of cases at top
-        //WA, KS, NY: governor Twitter, unemployment bureau, voting information (online)
- 
-       if (this.state.states[st].data === null) {
-           const proxy = "https://cors-forwarder.herokuapp.com/";
+        const proxy = "https://cors-forwarder.herokuapp.com/";
+        const url_state_2 = "&output=json";
+        if (this.state.states[st].house === null) {
             const url_state_1 = "https://whoismyrepresentative.com/getall_reps_bystate.php?state=";
-            const url_state_2 = "&output=json";
             fetch(proxy + url_state_1 + st + url_state_2)
                 .then(response => response.json())
                 .then(contents => {
                     const states = this.state.states;
-                    states[st].data = contents.results;
-                    this.setState({ states: states, curr_data: contents.results, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+                    states[st].house = contents.results;
+                    this.setState({ states: states, curr_house: contents.results, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+                    console.log(contents.results);
                 });
         } else {
-            this.setState({ curr_data: this.state.states[st].data, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+            this.setState({ curr_house: this.state.states[st].house, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+        }
+        
+        if (this.state.states[st].senate === null) {
+            const url_state_3 = "https://whoismyrepresentative.com/getall_sens_bystate.php?state=";
+            fetch(proxy + url_state_3 + st + url_state_2)
+                .then(response => response.json())
+                .then(contents => {
+                    const states = this.state.states;
+                    states[st].senate = contents.results;
+                    this.setState({ states: states, curr_senate: contents.results, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
+                    console.log(contents.results);
+                });
+        } else {
+            this.setState({ curr_senate: this.state.states[st].senate, popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
         }
     }
 
     getRepsAsList(data) {
-        return (
-            data.map((item, i) => {
-                return (
-                    <tr key={i}>
-                        <td>
-                            <a href={ item.link }>{ item.name + " (" + item.party.charAt(0) + ")"}</a>
-                        </td>
-                        <td>
-                            { item.phone }
-                        </td>
-                    </tr>
-                );
-            })
-        )
+        if (data != null) {
+            return (
+                data.map((item, i) => {
+                    return (
+                        <tr key={i}>
+                            <td>
+                                <a href={ item.link }>{ item.name + " (" + item.party.charAt(0) + ")"}</a>
+                            </td>
+                            <td>
+                                { item.phone }
+                            </td>
+                        </tr>
+                    );
+                })
+            )
+        }
     }
 
     renderResultsTable(data) {
@@ -215,8 +252,15 @@ class States extends React.Component {
                     <div ref={(n) => this.node = n} className="popup" style={{left: this.state.popup_x, top: this.state.popup_y}}>
                         <h5 className="text-center">{ this.state.popup_active.toUpperCase() }</h5>
                         <h6 className="text-center">Cases: { this.state.states[this.state.popup_active].cases }</h6>
+                        <p className="text-center">
+                            <a href={this.state.states[this.state.popup_active].governor_url}>Governor's Twitter</a><br></br>
+                            <a href={this.state.states[this.state.popup_active].unemployment_url}>Unemplyment Information</a><br></br>
+                            <a href={this.state.states[this.state.popup_active].voting_url}>Voting Information</a>
+                        </p>
+                        <p className="pt-2 text-center">Senate</p>
+                        { this.renderResultsTable(this.state.curr_senate) }
                         <p className="pt-2 text-center">House of Representatives</p>
-                        { this.renderResultsTable(this.state.curr_data) }
+                        { this.renderResultsTable(this.state.curr_house) }
                     </div>
                 );
         } else {
