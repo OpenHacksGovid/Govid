@@ -11,8 +11,11 @@ class Nav extends React.Component {
             <Router>
             <div >
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <h1 className="mr-auto"><Link to="/">goVid</Link></h1>
-                    <ul className="navbar-nav ml">
+                    <h1 className="mx-auto text-center"><Link to="/">goVid</Link></h1>
+                </nav>
+                <h5 className="text-center">All your information needs for COVID-19 and your government</h5>
+                <nav className="mb-3 navbar navbar-expand-lg navbar-light bg-light">
+                    <ul className="navbar-nav mx-auto">
                         <li className="navbar-item"><Link to="/">Home</Link></li>
                         <li className="navbar-item"><Link to="/news">News</Link></li>
                         <li className="navbar-item"><Link to="/about">About</Link></li>

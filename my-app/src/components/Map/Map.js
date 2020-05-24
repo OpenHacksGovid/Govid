@@ -180,7 +180,7 @@ class States extends React.Component {
             Reps Phone
         */
 
-        //->>>Get state cases for coloring & legend
+        //->>>Coloring legend
 
         this.setState({ popup_active:st, popup_x: e.pageX+10, popup_y: e.pageY-100 });
     }
@@ -201,7 +201,8 @@ class States extends React.Component {
         return (
             <div>
                 { this.renderPopup() }
-                <svg 
+                <svg
+                    className="map"
                     pretty_print="False"
                     viewBox="0 0 1000 589"
                 >
