@@ -11,15 +11,6 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "react-modal": "^3.11.2",
-=======
-    "react-hover": "^1.4.0",
->>>>>>> 6edb4e380434a8071523342ba1eb9059a22be7a9
-=======
-    "react-hover": "^1.4.0",
->>>>>>> c82d401e7dcefc4dac3dbb145c19221ab0a871f2
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
