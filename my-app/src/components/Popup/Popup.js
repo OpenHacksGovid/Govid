@@ -1,10 +1,11 @@
 import React from 'react';
-
-function Popup() {
-    return (
-        <div className="App" style={{background: "white"}}>
-            <h1>Popup text</h1>
-        </div>
-    );
+class Popup extends React.Component {
+    render() {
+        return (
+            <div className="App" style={{background: "white"}}>
+                <h1>State: {this.props.data}</h1>
+            </div>
+        );
+    }
 }
 export default Popup;
